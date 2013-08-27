@@ -22,6 +22,10 @@ weather.set("sunny");    // nothing printed, the value hasn't changed
 weather.set("hailing");  // prints "weather: hailing"
 ```
 
+Note that variables are unnamed, and so are not a general Session
+replacement: they aren't persisted across hot code pushes like
+Session key/values are.
+
 
 ## Version
 
