@@ -22,9 +22,11 @@ weather.set("sunny");    // nothing printed, the value hasn't changed
 weather.set("hailing");  // prints "weather: hailing"
 ```
 
-Note that variables are unnamed, and so are not a general Session
-replacement: they aren't persisted across hot code pushes like
-Session key/values are.
+Note that while variables are similar to Meteor’s
+[Session](http://docs.meteor.com/#session) object in that they provide
+a reactive data source, variables are not a complete Session
+replacement: variables are unnamed and aren’t persisted across hot
+code pushes like Session key/values are.
 
 
 ## Version
@@ -96,18 +98,21 @@ post.set({title: "Greetings", status: "published"});
 ```
 
 
-## Support
+## Donate
 
-Support the ongoing maintenance of this package by making a weekly
-contribution of your choice with
-[Gittip](https://www.gittip.com/awwx/).
+An easy and effective way to support the continued maintenance of this
+package and the development of new and useful packages is to [donate
+through Gittip](https://www.gittip.com/awwx/).
 
-Not sure what to give?  While the amount is entirely up to you, a
-weekly contribution of $1 is useful if you're relying on this package
-for something important and you want to help ensure that the package
-doesn't suffer from bitrot.  25&cent; is a cool amount for a personal
-contribution.
+Gittip is a [platform for sustainable
+crowd-funding](https://www.gittip.com/about/faq.html).
 
 Help build an ecosystem of well maintained, quality Meteor packages by
 joining the
 [Gittip Meteor Community](https://www.gittip.com/for/meteor/).
+
+
+## Hire
+
+Need support, debugging, or development for your project?  You can
+[hire me](http://awwx.ws/hire-me) to help out.
