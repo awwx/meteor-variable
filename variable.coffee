@@ -1,20 +1,24 @@
-_Variable = (initialValue) ->
+class _Variable
+  equals: (a, b) ->
+    EJSON.equals a, b
 
-  value = initialValue
-  dep = new Deps.Dependency()
+  constructor: (initialValue) ->
+    return new _Variable initialValue if @ not instanceof _Variable
 
-  fn = ->
-    dep.depend()
-    return value
+    value = initialValue
+    dep = new Deps.Dependency()
 
-  fn.set = (newValue) ->
-    unless EJSON.equals(newValue, value)
-      value = newValue
-      dep.changed()
-    return
+    fn = ->
+      dep.depend()
+      return value
 
-  return fn
+    fn.set = (newValue) =>
+      unless @equals newValue, value
+        value = newValue
+        dep.changed()
+      return
 
+    return fn
 
 if Package?
   Variable = _Variable
