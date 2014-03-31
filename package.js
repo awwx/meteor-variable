@@ -11,6 +11,6 @@ Package.on_use(function (api) {
 });
 
 Package.on_test(function (api) {
-  api.use(['coffeescript', 'tinytest', 'variable']);
+  api.use(['coffeescript', 'tinytest', 'variable', 'underscore']);
   api.add_files('variable-tests.coffee', ['client', 'server']);
 });
