@@ -1,11 +1,11 @@
 # variable
 
-Simple reactive variables that contain EJSON values.
+Reactive variables that contain EJSON values.
 
-This package encapsulates a simple but common case for reactive
-dependencies: when you want to have a simple variable that contains an
-[EJSON-compatible value](http://docs.meteor.com/#ejson),
-and you'd like that variable to be a reactive data source.
+This package encapsulates a common case for reactive dependencies:
+when you want to have a simple variable that contains an
+[EJSON-compatible value](http://docs.meteor.com/#ejson), and you'd
+like that variable to be a reactive data source.
 
 When set, the variable only triggers a reactive update if the new
 value is actually different than the old one.
@@ -24,18 +24,19 @@ weather.set("hailing");  // prints "weather: hailing"
 
 Note that while variables are similar to Meteor’s
 [Session](http://docs.meteor.com/#session) object in that they provide
-a reactive data source, variables are not a complete Session
-replacement: variables are unnamed and aren’t persisted across hot
-code pushes like Session key/values are.
+a reactive data source, variables are not a Session replacement:
+variables are unnamed and aren’t persisted across hot code pushes like
+Session key/values are.  Instead, variables are a basic building block
+for developing reactive applications.
 
 
 ## Version
 
-1.0.0
+1.1.0
 
-Meteor linker supported:
-This implementation works with both pre-linker Meteor (0.6.4.1 and
-below) and the new "linker" version of Meteor (0.6.5-rc12 and above).
+Built for the Meteor package system.  To install:
+
+    meteor add awwx:variable
 
 
 ## API
