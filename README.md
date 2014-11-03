@@ -1,4 +1,14 @@
-# variable
+# Obsolete
+
+The functionality of this package is now provided by the core Meteor
+package reactive-var:
+
+```
+var weather = new ReactiveVar("sunny", EJSON.equals);
+```
+
+
+## variable
 
 Reactive variables that contain EJSON values.
 
